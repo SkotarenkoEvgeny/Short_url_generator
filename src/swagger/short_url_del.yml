@@ -1,0 +1,18 @@
+parameters:
+  - name: short_url
+    in: path
+    description: delete short url
+    type: string
+responses:
+  201:
+    description: short_url - deleted
+    schema:
+      properties:
+        message:
+          type: string
+  400:
+    description: url not passed
+    schema:
+      properties:
+        message:
+          type: string

@@ -1,0 +1,20 @@
+parameters:
+  - name: short_url
+    in: path
+    description: set short url
+    type: string
+responses:
+  301:
+    description: redirect to long url or The url time was out
+  400:
+    description: url not passed
+    schema:
+      properties:
+        message:
+          type: string
+  404:
+    description: Short url not found
+    schema:
+      properties:
+        message:
+          type: string
